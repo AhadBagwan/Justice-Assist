@@ -70,9 +70,13 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__, instance_relative_config=False)
 
-    # --- ADDED: Centralized CORS Configuration for the entire app ---
-    # This single line handles CORS for all routes and blueprints.
-    CORS(app, supports_credentials=True)
+    # --- Centralized CORS Configuration for development and production ---
+    frontend_origins = os.environ.get("FRONTEND_URL", "*")
+    if frontend_origins != "*":
+        origins = [o.strip() for o in frontend_origins.split(",") if o.strip()]
+    else:
+        origins = "*"
+    CORS(app, resources={r"/*": {"origins": origins}}, supports_credentials=True)
     # -----------------------------------------------------------------
 
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///dev.db")

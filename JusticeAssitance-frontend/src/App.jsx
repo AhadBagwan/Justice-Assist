@@ -137,7 +137,8 @@ import Quiz from './pages/Quiz';
 import WhyUs from './pages/WhyUs';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
-import ForensicAnalysis from './pages/ForensicAnalysis'; // <-- 1. IMPORT THE NEW COMPONENT
+import ForensicAnalysis from './pages/ForensicAnalysis';
+import UserSettings from './pages/UserSettings';
 
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -203,7 +204,8 @@ const App = () => {
         <Route path="/get-guidance" element={<ProtectedRoute><GetGuidance /></ProtectedRoute>} />
         <Route path="/suspect-guess" element={<ProtectedRoute><SuspectGuess /></ProtectedRoute>} />
         <Route path="/chatbot" element={<ProtectedRoute><AIAssistant /></ProtectedRoute>} />
-        <Route path="/forensic-analysis" element={<ProtectedRoute><ForensicAnalysis /></ProtectedRoute>} /> {/* <-- 2. ADD THE NEW ROUTE */}
+        <Route path="/forensic-analysis" element={<ProtectedRoute><ForensicAnalysis /></ProtectedRoute>} />
+        <Route path="/user/settings" element={<ProtectedRoute><UserSettings /></ProtectedRoute>} />
         
         {/* --- Protected Admin Routes (Require Admin Login) --- */}
         <Route path="/admin/dashboard" element={<ProtectedRoute adminOnly={true}><AdminDashboard /></ProtectedRoute>} />

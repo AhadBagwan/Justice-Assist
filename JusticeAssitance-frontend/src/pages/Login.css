@@ -32,8 +32,6 @@
   color: #ffffff;
 }
 
-
-
 .login-form-container-single h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -78,18 +76,31 @@
   gap: 1rem;
 }
 
-.input-group input {
+.input-group input,
+.password-input input {
   width: 100%;
   padding: 0.8rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background-color: transparent !important;
+  background: transparent !important;
+  color: #ffffff !important;
   font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover, 
+.input-group input:-webkit-autofill:focus, 
+.input-group input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 99999s ease-in-out 0s;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
 }
 
 .input-group input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .password-input {

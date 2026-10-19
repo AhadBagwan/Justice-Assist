@@ -144,6 +144,7 @@ import axios from 'axios';
 
 const Login = () => {
   const [role, setRole] = useState('user');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPass, setShowPass] = useState(false);
@@ -154,8 +155,8 @@ const Login = () => {
     e.preventDefault();
     setError('');
 
-    if (!email || !password) {
-      setError('Please enter both email and password.');
+    if (!name.trim() || !email || !password) {
+      setError('Please enter your name, email, and password.');
       return;
     }
 
@@ -173,6 +174,8 @@ const Login = () => {
       localStorage.setItem('token', access_token);
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('role', role); // Store the role from the frontend button
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userName', name.trim());
 
       if (role === 'admin') {
         navigate('/admin/dashboard');
@@ -218,11 +221,23 @@ const Login = () => {
         <form onSubmit={handleLogin} className="login-form-element">
           <div className="input-group">
             <input
+              type="text"
+              required
+              autoComplete="off"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter Your Name"
+            />
+          </div>
+
+          <div className="input-group">
+            <input
               type="email"
               required
+              autoComplete="off"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email Address"
+              placeholder="Enter Your Email"
             />
           </div>
 

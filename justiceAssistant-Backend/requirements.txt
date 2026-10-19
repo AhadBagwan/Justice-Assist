@@ -64,3 +64,4 @@ tavily-python
 rq
 google-genai
 piexif
+gunicorn

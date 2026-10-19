@@ -151,6 +151,92 @@
   margin-top: 2rem;
 }
 
+/* Team Section */
+.about-creator {
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 3rem 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.creator-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.8rem 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.creator-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.creator-info p {
+  color: var(--text-secondary-color);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.creator-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.creator-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.creator-link.github:hover {
+  background-color: #24292e;
+  color: #ffffff;
+  border-color: #24292e;
+}
+
+.creator-link.linkedin:hover {
+  background-color: #0077b5;
+  color: #ffffff;
+  border-color: #0077b5;
+}
+
+.creator-link.portfolio:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
 .about-cta h2 {
   color: #ffffff; /* Kept static */
 }

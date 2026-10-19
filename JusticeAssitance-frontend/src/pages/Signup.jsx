@@ -136,6 +136,11 @@ const Signup = () => {
         password: password,
       });
 
+      if (name.trim()) {
+        localStorage.setItem('userName', name.trim());
+      }
+      localStorage.setItem('userEmail', email);
+
       alert('Account created successfully! Please proceed to login.');
       navigate('/login');
 

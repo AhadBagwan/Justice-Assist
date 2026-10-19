@@ -60,6 +60,44 @@ const AboutUs = () => {
 
       
 
+      {/* Team Section */}
+      <section className="about-creator" data-aos="fade-up">
+        <h2>Our Team</h2>
+        <div className="team-grid">
+          <div className="creator-card">
+            <div className="creator-info">
+              <h3>Ahad Bagwan</h3>
+              <p>Creator & Lead Developer</p>
+              <div className="creator-links">
+                <a href="https://github.com/AhadBagwan" target="_blank" rel="noopener noreferrer" className="creator-link github">
+                  <i className="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/ahadbagwan/" target="_blank" rel="noopener noreferrer" className="creator-link linkedin">
+                  <i className="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://ahadbagwan.tech" target="_blank" rel="noopener noreferrer" className="creator-link portfolio">
+                  <i className="fa-solid fa-globe"></i> Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="creator-card">
+            <div className="creator-info">
+              <h3>Huzaifa Shaikh</h3>
+              <p>Team Member</p>
+            </div>
+          </div>
+
+          <div className="creator-card">
+            <div className="creator-info">
+              <h3>Siddi Gadge</h3>
+              <p>Team Member</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Commitment Section */}
       <section className="our-commitment" data-aos="fade-up">
         <h2>Our Commitment to You</h2>
